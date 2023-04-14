@@ -1,16 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import styles from "./menu.module.scss";
 
-import { useSelector, useDispatch } from "react-redux";
-import { fetchMenus } from "../../redux/slices/menuSlice";
+import { useSelector } from "react-redux";
 
 const Menu = () => {
-  const dispatch = useDispatch();
-  const menuItem = useSelector((state) => state.menu);
-  useEffect(() => {
-    dispatch(fetchMenus());
-  }, []);
+  const menu = useSelector((state) => state.menu.itemMenus);
 
   return (
     <nav className={styles.menu}>
@@ -20,25 +15,15 @@ const Menu = () => {
         <span></span>
       </div>
       <ul className={styles.menu__list}>
-        {menuItem.status === "error" ? (
-          <div>
-            <h2>Виникла помилка 😕</h2>
-            <p>Нажаль не вдалося отримати меню</p>
-            <p>Спробуйте повторити пізніше</p>
-          </div>
-        ) : menuItem.status === "loading" ? (
-          <div>Loading...</div>
-        ) : (
-          menuItem.itemMenus.map((obj) => {
-            return (
-              <li key={obj} className={styles.menu__listItem}>
-                <a className={styles.menu__listLink} href="#">
-                  {obj}
-                </a>
-              </li>
-            );
-          })
-        )}
+        {menu.map((obj) => {
+          return (
+            <li key={obj} className={styles.menu__listItem}>
+              <a className={styles.menu__listLink} href="#">
+                {obj}
+              </a>
+            </li>
+          );
+        })}
       </ul>
     </nav>
   );
