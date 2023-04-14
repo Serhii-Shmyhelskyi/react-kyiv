@@ -24,6 +24,7 @@
   line-height: 20px;
   color: #4e5665;
   text-transform: uppercase;
+  transition: all 15s ease-in-out;
 }
 
 .footer__itemList {
@@ -46,6 +47,7 @@
 
 .footer__itemBlog {
   width: 300px;
+
   h5 {
     cursor: pointer;
   }
@@ -92,4 +94,15 @@
   background-image: url("../../assets/img/footer-email.svg");
   height: 13px;
   top: 2px;
+}
+
+.footer__toggleDown {
+  height: 25px;
+  transition: height ease 0.35s;
+}
+
+.footer__togleUp {
+  height: 0;
+  overflow: hidden;
+  transition: height ease 0.35s;
 }

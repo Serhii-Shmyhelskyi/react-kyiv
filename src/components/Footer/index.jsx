@@ -8,20 +8,11 @@ import {
   footerItemKontack,
 } from "./FooterArr.jsx";
 
-const useToggle = (initialState) => {
-  const [toggleValue, setToggleValue] = useState(initialState);
-
-  const toggler = () => {
-    setToggleValue(!toggleValue);
-  };
-  return [toggleValue, toggler];
-};
-
 const Footer = () => {
-  const [toggleCompani, setToggleCompani] = useToggle();
-  const [toggleDetal, setToggleDetal] = useToggle();
-  const [toggleContacts, setToggleContacts] = useToggle();
-  const [toggleBlog, setToggleBlog] = useToggle();
+  const [toggleCompani, setToggleCompani] = useState();
+  const [toggleDetal, setToggleDetal] = useState();
+  const [toggleContacts, setToggleContacts] = useState();
+  const [toggleBlog, setToggleBlog] = useState();
 
   return (
     <div>
@@ -30,7 +21,7 @@ const Footer = () => {
           <div className={styles.footer__items}>
             <div className={(styles.footer__item, styles.footer__itemCompany)}>
               <h5
-                onClick={setToggleCompani}
+                onClick={() => setToggleCompani(!toggleCompani)}
                 className={
                   (styles.footer__itemTitle, styles.footer__itemTitleCompany)
                 }>
@@ -40,21 +31,26 @@ const Footer = () => {
                 className={
                   (styles.footer__itemList, styles.footer__itemListCompany)
                 }>
-                {toggleCompani &&
-                  footerItemCompani.map((obj) => {
-                    return (
-                      <li key={obj}>
-                        <a className={styles.footer__itemLink} href="#">
-                          {obj}
-                        </a>
-                      </li>
-                    );
-                  })}
+                {footerItemCompani.map((obj) => {
+                  return (
+                    <li
+                      key={obj}
+                      className={
+                        toggleCompani
+                          ? styles.footer__toggleDown
+                          : styles.footer__togleUp
+                      }>
+                      <a className={styles.footer__itemLink} href="#">
+                        {obj}
+                      </a>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
             <div className={styles.footer__item}>
               <h5
-                onClick={setToggleDetal}
+                onClick={() => setToggleDetal(!toggleDetal)}
                 className={
                   (styles.footer__itemTitle, styles.footer__itemTitleDetal)
                 }>
@@ -64,58 +60,73 @@ const Footer = () => {
                 className={
                   (styles.footer__itemList, styles.footer__itemListDetal)
                 }>
-                {toggleDetal &&
-                  footerItemDetal.map((obj) => {
-                    return (
-                      <li key={obj}>
-                        <a className={styles.footer__itemLink} href="#">
-                          {obj}
-                        </a>
-                      </li>
-                    );
-                  })}
+                {footerItemDetal.map((obj) => {
+                  return (
+                    <li
+                      key={obj}
+                      className={
+                        toggleDetal
+                          ? styles.footer__toggleDown
+                          : styles.footer__togleUp
+                      }>
+                      <a className={styles.footer__itemLink} href="#">
+                        {obj}
+                      </a>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
             <div className={styles.footer__item}>
               <h5
-                onClick={setToggleContacts}
+                onClick={() => setToggleContacts(!toggleContacts)}
                 className={
                   (styles.footer__itemTitle, styles.footer__itemTitleContacts)
                 }>
                 КОНТАКТИ
               </h5>
               <ul className={styles.footer__itemList}>
-                {toggleContacts &&
-                  footerItemKontack.map((obj) => {
-                    return (
-                      <li key={obj}>
-                        <a className={styles.footer__itemLink} href="#">
-                          {obj}
-                        </a>
-                      </li>
-                    );
-                  })}
+                {footerItemKontack.map((obj) => {
+                  return (
+                    <li
+                      key={obj}
+                      className={
+                        toggleContacts
+                          ? styles.footer__toggleDown
+                          : styles.footer__togleUp
+                      }>
+                      <a className={styles.footer__itemLink} href="#">
+                        {obj}
+                      </a>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
             <div className={(styles.footer__item, styles.footer__itemBlog)}>
               <h5
-                onClick={setToggleBlog}
+                onClick={() => setToggleBlog(!toggleBlog)}
                 className={
                   (styles.footer__itemTitle, styles.footer__itemTitleBlog)
                 }>
                 БЛОГ
               </h5>
               <ul className={styles.footer__itemList}>
-                {toggleBlog &&
-                  footerItemBlog.map((obj) => {
-                    return (
-                      <li key={obj}>
-                        <a className={styles.footer__itemLink} href="#">
-                          {obj}
-                        </a>
-                      </li>
-                    );
-                  })}
+                {footerItemBlog.map((obj) => {
+                  return (
+                    <li
+                      key={obj}
+                      className={
+                        toggleBlog
+                          ? styles.footer__toggleDown
+                          : styles.footer__togleUp
+                      }>
+                      <a className={styles.footer__itemLink} href="#">
+                        {obj}
+                      </a>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </div>
@@ -127,3 +138,23 @@ const Footer = () => {
 };
 
 export default Footer;
+
+// {toggleCompani
+//   ? footerItemCompani.map((obj) => {
+//       return (
+//         <li key={obj} className={styles.toggle}>
+//           <a className={styles.footer__itemLink} href="#">
+//             {obj}
+//           </a>
+//         </li>
+//       );
+//     })
+//   : footerItemCompani.map((obj) => {
+//       return (
+//         <li key={obj} className={styles.antitogle}>
+//           <a className={styles.footer__itemLink} href="#">
+//             {obj}
+//           </a>
+//         </li>
+//       );
+//     })}
