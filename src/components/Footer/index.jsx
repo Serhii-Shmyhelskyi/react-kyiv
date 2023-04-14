@@ -1,14 +1,19 @@
 import React, { useState } from "react";
+
+import { useSelector } from "react-redux";
+
 import styles from "./footer.module.scss";
 
-import {
-  footerItemDetal,
-  footerItemBlog,
-  footerItemCompani,
-  footerItemKontack,
-} from "./FooterArr.jsx";
-
 const Footer = () => {
+  const footerItemDetal = useSelector((state) => state.footer.footerItemDetal);
+  const footerItemBlog = useSelector((state) => state.footer.footerItemBlog);
+  const footerItemCompani = useSelector(
+    (state) => state.footer.footerItemCompani
+  );
+  const footerItemKontack = useSelector(
+    (state) => state.footer.footerItemKontack
+  );
+
   const [toggleCompani, setToggleCompani] = useState();
   const [toggleDetal, setToggleDetal] = useState();
   const [toggleContacts, setToggleContacts] = useState();
@@ -89,14 +94,19 @@ const Footer = () => {
                 {footerItemKontack.map((obj) => {
                   return (
                     <li
-                      key={obj}
+                      key={obj.name}
                       className={
                         toggleContacts
                           ? styles.footer__toggleDown
                           : styles.footer__togleUp
                       }>
                       <a className={styles.footer__itemLink} href="#">
-                        {obj}
+                        <img
+                          src={obj.imageUrlFooter}
+                          alt="FooterIcon"
+                          className={styles.footer__icon}
+                        />
+                        {obj.name}
                       </a>
                     </li>
                   );
@@ -130,7 +140,7 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className={styles.footer__copy}>© 2020 Всі права захищені</div>
+          <div className={styles.footer__copy}>© 2023 Всі права захищені</div>
         </div>
       </footer>
     </div>
@@ -138,23 +148,3 @@ const Footer = () => {
 };
 
 export default Footer;
-
-// {toggleCompani
-//   ? footerItemCompani.map((obj) => {
-//       return (
-//         <li key={obj} className={styles.toggle}>
-//           <a className={styles.footer__itemLink} href="#">
-//             {obj}
-//           </a>
-//         </li>
-//       );
-//     })
-//   : footerItemCompani.map((obj) => {
-//       return (
-//         <li key={obj} className={styles.antitogle}>
-//           <a className={styles.footer__itemLink} href="#">
-//             {obj}
-//           </a>
-//         </li>
-//       );
-//     })}

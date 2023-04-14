@@ -61,39 +61,12 @@
   }
 }
 
-.footer__itemLinkSocial {
-  padding-left: 28px;
+.footer__icon {
+  width: 20px;
+  height: 20px;
   position: relative;
-  h5 {
-    cursor: pointer;
-  }
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    width: 16px;
-    height: 16px;
-  }
-}
-
-.footer__item-linkMessage::before {
-  background-image: url("../../assets/img/footer-message.svg");
-  width: 17px;
-  top: 1px;
-}
-.footer__item-linkFacebook::before {
-  background-image: url("../../assets/img/footer-facebook.svg");
-}
-.footer__item-linkInstagram::before {
-  background-image: url("../../assets/img/footer-instagram.svg");
-}
-.footer__item-linkYoutube::before {
-  background-image: url("../../assets/img/footer-youtube.svg");
-}
-.footer__item-linkEmail::before {
-  background-image: url("../../assets/img/footer-email.svg");
-  height: 13px;
-  top: 2px;
+  top: 5px;
+  margin-right: 5px;
 }
 
 .footer__toggleDown {
