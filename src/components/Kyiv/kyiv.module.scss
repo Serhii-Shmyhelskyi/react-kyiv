@@ -1,0 +1,75 @@
+@import "../../App.scss";
+
+.kyiv {
+  padding: 80px 0 0;
+}
+
+.kyiv__title {
+  margin-bottom: 13px;
+}
+
+.kyiv__text {
+  margin-bottom: 72px;
+}
+
+.kyiv__item {
+  margin-bottom: 100px;
+  background-position: right;
+  background-repeat: no-repeat;
+  padding: 70px 0;
+  &:nth-child(even) {
+    background-position: left;
+    .kyiv__box {
+      margin-left: auto;
+      &::after {
+        border-left: none;
+        border-right: 2px solid #ecb84c;
+        border-top: 2px solid #ecb84c;
+        top: 19px;
+        right: 19px;
+        left: auto;
+      }
+      &::before {
+        border-right: none;
+        border-left: 2px solid #ecb84c;
+        border-bottom: 2px solid #ecb84c;
+        left: 19px;
+        bottom: 19px;
+      }
+    }
+  }
+}
+
+.kyiv__box {
+  max-width: 470px;
+  padding: 33px 40px 33px;
+  background-color: #fff;
+  position: relative;
+  &::after,
+  &::before {
+    content: "";
+    position: absolute;
+    width: 33px;
+    height: 33px;
+  }
+  &::after {
+    border-left: 2px solid #ecb84c;
+    border-top: 2px solid #ecb84c;
+    top: 19px;
+    left: 19px;
+  }
+  &::before {
+    border-right: 2px solid #ecb84c;
+    border-bottom: 2px solid #ecb84c;
+    right: 19px;
+    bottom: 19px;
+  }
+}
+
+.kyiv__boxTitle {
+  font-family: Georgia;
+  font-size: 24px;
+  line-height: 25px;
+  color: #4e5665;
+  margin-bottom: 20px;
+}

@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-  itemMenus: ["Резюме", "Головна", "Види", "Що зробити", "Резиденції", "Фото"],
+  itemMenus: ["Головна", "Види", "Що зробити", "Резиденції", "Фото"],
 };
 
 const menuSlice = createSlice({
