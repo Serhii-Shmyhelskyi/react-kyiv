@@ -24,17 +24,22 @@ const Footer = () => {
       <footer className={styles.footer}>
         <div className={styles.container}>
           <div className={styles.footer__items}>
-            <div className={(styles.footer__item, styles.footer__itemCompany)}>
+            <div
+              className={
+                styles.footer__item + " " + styles.footer__itemCompany
+              }>
               <h5
                 onClick={() => setToggleCompani(!toggleCompani)}
                 className={
-                  (styles.footer__itemTitle, styles.footer__itemTitleCompany)
+                  styles.footer__itemTitle +
+                  " " +
+                  styles.footer__itemTitleCompany
                 }>
                 КОМПАНІЯ
               </h5>
               <ul
                 className={
-                  (styles.footer__itemList, styles.footer__itemListCompany)
+                  styles.footer__itemList + " " + styles.footer__itemListCompany
                 }>
                 {footerItemCompani.map((obj) => {
                   return (
@@ -57,13 +62,13 @@ const Footer = () => {
               <h5
                 onClick={() => setToggleDetal(!toggleDetal)}
                 className={
-                  (styles.footer__itemTitle, styles.footer__itemTitleDetal)
+                  styles.footer__itemTitle + " " + styles.footer__itemTitleDetal
                 }>
                 ДЕТАЛІ
               </h5>
               <ul
                 className={
-                  (styles.footer__itemList, styles.footer__itemListDetal)
+                  styles.footer__itemList + " " + styles.footer__itemListDetal
                 }>
                 {footerItemDetal.map((obj) => {
                   return (
@@ -86,7 +91,9 @@ const Footer = () => {
               <h5
                 onClick={() => setToggleContacts(!toggleContacts)}
                 className={
-                  (styles.footer__itemTitle, styles.footer__itemTitleContacts)
+                  styles.footer__itemTitle +
+                  " " +
+                  styles.footer__itemTitleContacts
                 }>
                 КОНТАКТИ
               </h5>
@@ -113,11 +120,12 @@ const Footer = () => {
                 })}
               </ul>
             </div>
-            <div className={(styles.footer__item, styles.footer__itemBlog)}>
+            <div
+              className={styles.footer__item + " " + styles.footer__itemBlog}>
               <h5
                 onClick={() => setToggleBlog(!toggleBlog)}
                 className={
-                  (styles.footer__itemTitle, styles.footer__itemTitleBlog)
+                  styles.footer__itemTitle + " " + styles.footer__itemTitleBlog
                 }>
                 БЛОГ
               </h5>

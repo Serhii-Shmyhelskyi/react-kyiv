@@ -9,7 +9,9 @@ const Kyiv = () => {
     <section className={styles.kyiv}>
       <div className={styles.container}>
         <div className={styles.containerContent}>
-          <h2 className={(styles.kyiv__title, styles.title)}>Київ - це...</h2>
+          <h2 className={styles.kyiv__title + " " + styles.title}>
+            Київ - це...
+          </h2>
           <p className={styles.kyiv__text}>
             Київ – одне з найстаріших міст Європи, засноване щонайменше 1500
             років тому. Сучасне європейське місто здатне здивувати будь-кого –

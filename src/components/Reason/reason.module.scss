@@ -1,0 +1,49 @@
+@import "../../App.scss";
+
+.reason {
+  padding: 80px 0 0;
+}
+
+.reason__title {
+  text-align: center;
+  font-family: Georgia;
+  padding-bottom: 22px;
+  font-size: 32px;
+  line-height: 38px;
+  color: #4e5665;
+}
+
+.reason__link {
+  text-align: right;
+  a {
+    font-weight: 700;
+    color: #ecb84c;
+    margin-bottom: 36px;
+  }
+}
+
+.reason__statistics {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  padding-bottom: 80px;
+}
+
+.reason__statisticsImages {
+  height: 80px;
+}
+
+.reason__statisticsNum {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 30px;
+  padding-top: 32px;
+}
+
+.reason__statisticsText {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+  color: #909090;
+}

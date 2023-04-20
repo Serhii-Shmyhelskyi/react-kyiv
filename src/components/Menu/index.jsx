@@ -3,6 +3,7 @@ import React from "react";
 import styles from "./menu.module.scss";
 
 import { useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Menu = () => {
   const menu = useSelector((state) => state.menu.itemMenus);
@@ -18,9 +19,9 @@ const Menu = () => {
         {menu.map((obj) => {
           return (
             <li key={obj} className={styles.menu__listItem}>
-              <a className={styles.menu__listLink} href="#">
-                {obj}
-              </a>
+              <Link to={obj.link} className={styles.menu__listLink}>
+                {obj.name}
+              </Link>
             </li>
           );
         })}
