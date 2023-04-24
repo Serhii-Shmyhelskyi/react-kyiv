@@ -1,0 +1,95 @@
+@import "../../App.scss";
+
+.about__previewTitle {
+  padding-top: 50px;
+  margin-bottom: 38px;
+}
+
+.about__previewText {
+  margin: 53px auto 80px;
+}
+
+.about__imagesBox {
+  padding-top: 73px;
+  text-align: center;
+  position: relative;
+}
+
+.about__dot {
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  background-color: rgba(#ecb84c, 0.75);
+  position: absolute;
+
+  cursor: pointer;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffd600;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  &:hover::before {
+    display: block;
+  }
+  &:hover .about__dotText {
+    display: block;
+  }
+}
+
+.about__dotText {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 28px;
+  color: #505050;
+  white-space: nowrap;
+  position: absolute;
+  top: 10px;
+  left: -200px;
+  transition: all 0.3s ease-in-out;
+  display: none;
+}
+
+.about__dot1 {
+  top: 283px;
+  left: 100px;
+  .about__dotText {
+    top: 30px;
+    left: -200px;
+  }
+}
+.about__dot2 {
+  top: 195px;
+  left: 200px;
+  .about__dotText {
+    top: -30px;
+    left: 50px;
+  }
+}
+.about__dot3 {
+  top: 304px;
+  right: 390px;
+  .about__dotText {
+    top: -50px;
+    left: 80px;
+  }
+}
+
+.about__dot4 {
+  bottom: 73px;
+  right: 375px;
+  .about__dotText {
+    top: 30px;
+    left: -100px;
+  }
+}

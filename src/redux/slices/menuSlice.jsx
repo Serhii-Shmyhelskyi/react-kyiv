@@ -3,10 +3,11 @@ import { createSlice } from "@reduxjs/toolkit";
 const initialState = {
   itemMenus: [
     { name: "Головна", link: "/" },
-    { name: "Чому Київ?", link: "whyKyiv" },
-    { name: "Що зробити", link: "2" },
-    { name: "Резиденції", link: "3" },
-    { name: "Фото", link: "4" },
+    { name: "Чому Київ?", link: "reason" },
+    { name: "Що зробити", link: "/" },
+    { name: "Мрія 'АН-225'", link: "dream" },
+    { name: "Резиденції", link: "/" },
+    { name: "Фото", link: "/" },
   ],
 };
 

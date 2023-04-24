@@ -18,7 +18,7 @@ const Menu = () => {
       <ul className={styles.menu__list}>
         {menu.map((obj) => {
           return (
-            <li key={obj} className={styles.menu__listItem}>
+            <li key={obj.name} className={styles.menu__listItem}>
               <Link to={obj.link} className={styles.menu__listLink}>
                 {obj.name}
               </Link>

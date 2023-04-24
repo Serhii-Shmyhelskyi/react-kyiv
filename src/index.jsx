@@ -7,7 +7,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App.jsx";
 import Home from "./pages/Home.jsx";
-import WhiKyiv from "./pages/WhyKyiv.jsx";
+import Reason from "./pages/Reason";
+import Dream from "./pages/Dream";
 
 const router = createBrowserRouter([
   {
@@ -19,8 +20,16 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "whyKyiv",
-        element: <WhiKyiv />,
+        path: "reason",
+        element: <Reason />,
+      },
+      // {
+      //   path: "reason",
+      //   element: <Reason />,
+      // },
+      {
+        path: "dream",
+        element: <Dream />,
       },
     ],
   },
