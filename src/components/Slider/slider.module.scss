@@ -1,0 +1,34 @@
+@import "../../App.scss";
+
+.photo__slider {
+  max-width: 640px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.photo__sliderLine {
+  width: 1920px;
+  background-color: red;
+  display: flex;
+  position: relative;
+  left: 0;
+  transition: all ease 1s;
+}
+.sliderNext {
+  border: none;
+  width: 40px;
+  height: 40px;
+  background-color: #ecb84c;
+  border-radius: 50%;
+  cursor: pointer;
+
+  text-decoration: none;
+}
+.sliderPrew {
+  border: none;
+  width: 40px;
+  height: 40px;
+  background-color: #ecb84c;
+  border-radius: 50%;
+  cursor: pointer;
+  text-decoration: none;
+}

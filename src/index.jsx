@@ -9,6 +9,7 @@ import App from "./App.jsx";
 import Home from "./pages/Home.jsx";
 import Reason from "./pages/Reason";
 import Dream from "./pages/Dream";
+import Photo from "./pages/Photo";
 
 const router = createBrowserRouter([
   {
@@ -23,13 +24,13 @@ const router = createBrowserRouter([
         path: "reason",
         element: <Reason />,
       },
-      // {
-      //   path: "reason",
-      //   element: <Reason />,
-      // },
       {
         path: "dream",
         element: <Dream />,
+      },
+      {
+        path: "photo",
+        element: <Photo />,
       },
     ],
   },

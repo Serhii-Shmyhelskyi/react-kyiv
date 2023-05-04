@@ -1,0 +1,31 @@
+@import "../../App.scss";
+
+.photo {
+  padding: 80px 1px;
+}
+
+.photo__title {
+  margin-bottom: 42px;
+}
+
+.photo__text {
+  padding-bottom: 48px;
+  margin-bottom: 56px;
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    width: 270px;
+    height: 1px;
+    background-color: rgba(#d0d4d8, 0.5);
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+  }
+}
+
+.photo__slider {
+  max-width: 640px;
+  margin: 0 auto;
+}
