@@ -1,13 +1,12 @@
 @import "../../App.scss";
 
 .photo__slider {
-  max-width: 640px;
+  width: 640px;
   margin: 0 auto;
   overflow: hidden;
 }
 .photo__sliderLine {
   width: 1920px;
-  background-color: red;
   display: flex;
   position: relative;
   left: 0;
@@ -20,8 +19,9 @@
   background-color: #ecb84c;
   border-radius: 50%;
   cursor: pointer;
-
   text-decoration: none;
+  position: relative;
+  top: -250px;
 }
 .sliderPrew {
   border: none;
@@ -31,4 +31,7 @@
   border-radius: 50%;
   cursor: pointer;
   text-decoration: none;
+  position: relative;
+  top: -250px;
+  right: -560px;
 }

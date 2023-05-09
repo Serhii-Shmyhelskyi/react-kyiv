@@ -1,13 +1,14 @@
 @import "../../App.scss";
 
 .footer {
-  padding: 55px 0 33px;
+  padding: 55px 30px;
   background-color: #f8f8f8;
 }
 
 .footer__items {
   display: flex;
   justify-content: space-between;
+  text-align: center;
 }
 
 .footer__copy {
@@ -39,24 +40,21 @@
 }
 
 .footer__item {
-  width: 172px;
-  padding-left: 40px;
+  width: 165px;
   h5 {
     cursor: pointer;
   }
 }
 
 .footer__itemBlog {
-  width: 300px;
-  padding-left: 25px;
+  width: 165px;
   h5 {
     cursor: pointer;
   }
 }
 
 .footer__itemCompany {
-  width: 300px;
-  padding-left: 180px;
+  width: 165px;
   h5 {
     cursor: pointer;
   }
@@ -79,4 +77,16 @@
   height: 0;
   overflow: hidden;
   transition: height ease 0.35s;
+}
+
+@media (max-width: 780px) {
+  .footer {
+    padding: 35px 33px;
+  }
+  .footer__copy {
+    padding-top: 20px;
+  }
+  .footer__itemCompany {
+    padding-left: 0;
+  }
 }

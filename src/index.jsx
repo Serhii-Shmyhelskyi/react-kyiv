@@ -13,7 +13,7 @@ import Photo from "./pages/Photo";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "",
     element: <App />,
     children: [
       {
