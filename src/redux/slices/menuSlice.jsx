@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   itemMenus: [
-    { name: "Головна", link: "" },
+    { name: "Головна", link: "react-kyiv" },
     { name: "Чому Київ?", link: "reason" },
     { name: "Мрія 'АН-225'", link: "dream" },
     { name: "Фото", link: "photo" },
