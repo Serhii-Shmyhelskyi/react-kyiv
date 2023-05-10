@@ -25,7 +25,8 @@
   }
 }
 
-.photo__slider {
-  max-width: 640px;
-  margin: 0 auto;
+@media (max-width: 780px) {
+  .photo {
+    padding: 40px 0;
+  }
 }

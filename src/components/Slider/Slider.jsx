@@ -25,25 +25,30 @@ const Slider = () => {
             <img src={slide} alt={slide} />
           ))}
         </div>
+        <button
+          onClick={() =>
+            offset > -sizePhoto + 1
+              ? setOffset(offset - sizePhoto * (slides.length - 1))
+              : setOffset(offset + sizePhoto)
+          }
+          className={styles.sliderNext}>
+          <img src={sliderNext} alt="sliderNext" />
+        </button>
+        <button
+          onClick={() =>
+            offset < -sizePhoto * (slides.length - 1) + 1
+              ? setOffset(offset + sizePhoto * (slides.length - 1))
+              : setOffset(offset - sizePhoto)
+          }
+          className={styles.sliderPrew}>
+          <img src={sliderPrew} alt="sliderPrew" />
+        </button>
       </div>
-      <button
-        onClick={() =>
-          offset > -sizePhoto + 1
-            ? setOffset(offset - sizePhoto * (slides.length - 1))
-            : setOffset(offset + sizePhoto)
-        }
-        className={styles.sliderNext}>
-        <img src={sliderNext} alt="sliderNext" />
-      </button>
-      <button
-        onClick={() =>
-          offset < -sizePhoto * (slides.length - 1) + 1
-            ? setOffset(offset + sizePhoto * (slides.length - 1))
-            : setOffset(offset - sizePhoto)
-        }
-        className={styles.sliderPrew}>
-        <img src={sliderPrew} alt="sliderPrew" />
-      </button>
+      <div className={styles.sliderSmall}>
+        {slides.map((slide) => (
+          <img src={slide} alt={slide} />
+        ))}
+      </div>
     </>
   );
 };

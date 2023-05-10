@@ -90,3 +90,45 @@
     padding-left: 0;
   }
 }
+
+@media (max-width: 650px) {
+  .footer__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 170px;
+    text-align: center;
+  }
+  .footer__itemTitle {
+    margin-bottom: 10px;
+  }
+
+  .footer__itemCompany {
+    width: 100%;
+    h5 {
+      cursor: auto;
+    }
+  }
+  .footer__item {
+    width: 100%;
+    h5 {
+      cursor: auto;
+    }
+  }
+
+  .footer__itemBlog {
+    width: 100%;
+    h5 {
+      cursor: auto;
+    }
+  }
+  .footer__togleUp {
+    height: 25px;
+    overflow: visible;
+  }
+  .footer {
+    padding: 35px 5px;
+  }
+  .footer__copy {
+    padding-top: 0px;
+  }
+}

@@ -6,19 +6,19 @@ import { Provider } from "react-redux";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import App from "./App.jsx";
-import Home from "./pages/Home.jsx";
 import Reason from "./pages/Reason";
 import Dream from "./pages/Dream";
 import Photo from "./pages/Photo";
+import Kyiv from "./pages/Kyiv/index.jsx";
 
 const router = createBrowserRouter([
   {
-    path: "react-kyiv",
+    path: "/",
     element: <App />,
     children: [
       {
         index: true,
-        element: <Home />,
+        element: <Kyiv />,
       },
       {
         path: "reason",

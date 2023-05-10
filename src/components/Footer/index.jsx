@@ -24,40 +24,6 @@ const Footer = () => {
       <footer className={styles.footer}>
         <div className={styles.container}>
           <div className={styles.footer__items}>
-            <div
-              className={
-                styles.footer__item + " " + styles.footer__itemCompany
-              }>
-              <h5
-                onClick={() => setToggleCompani(!toggleCompani)}
-                className={
-                  styles.footer__itemTitle +
-                  " " +
-                  styles.footer__itemTitleCompany
-                }>
-                КОМПАНІЯ
-              </h5>
-              <ul
-                className={
-                  styles.footer__itemList + " " + styles.footer__itemListCompany
-                }>
-                {footerItemCompani.map((obj) => {
-                  return (
-                    <li
-                      key={obj}
-                      className={
-                        toggleCompani
-                          ? styles.footer__toggleDown
-                          : styles.footer__togleUp
-                      }>
-                      <a className={styles.footer__itemLink} href="#">
-                        {obj}
-                      </a>
-                    </li>
-                  );
-                })}
-              </ul>
-            </div>
             <div className={styles.footer__item}>
               <h5
                 onClick={() => setToggleDetal(!toggleDetal)}
@@ -136,6 +102,40 @@ const Footer = () => {
                       key={obj}
                       className={
                         toggleBlog
+                          ? styles.footer__toggleDown
+                          : styles.footer__togleUp
+                      }>
+                      <a className={styles.footer__itemLink} href="#">
+                        {obj}
+                      </a>
+                    </li>
+                  );
+                })}
+              </ul>
+            </div>
+            <div
+              className={
+                styles.footer__item + " " + styles.footer__itemCompany
+              }>
+              <h5
+                onClick={() => setToggleCompani(!toggleCompani)}
+                className={
+                  styles.footer__itemTitle +
+                  " " +
+                  styles.footer__itemTitleCompany
+                }>
+                КОМПАНІЯ
+              </h5>
+              <ul
+                className={
+                  styles.footer__itemList + " " + styles.footer__itemListCompany
+                }>
+                {footerItemCompani.map((obj) => {
+                  return (
+                    <li
+                      key={obj}
+                      className={
+                        toggleCompani
                           ? styles.footer__toggleDown
                           : styles.footer__togleUp
                       }>

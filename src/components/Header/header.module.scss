@@ -48,3 +48,20 @@
     margin-left: 30px;
   }
 }
+
+@media (max-width: 780px) {
+  .header__top {
+    padding: 30px;
+  }
+  .header__title {
+    font-size: 150px;
+    line-height: 180px;
+  }
+}
+
+@media (max-width: 780px) {
+  .header__title {
+    font-size: 100px;
+    line-height: 150px;
+  }
+}
