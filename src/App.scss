@@ -416,23 +416,3 @@ template {
 [hidden] {
   display: none;
 }
-
-//kyiv
-
-@media (max-width: 780px) {
-  .kyiv {
-    padding: 40px 0;
-  }
-  .kyiv__text {
-    margin-bottom: 40px;
-  }
-  .kyiv__item {
-    margin-bottom: 40px;
-  }
-  .kyiv__box {
-    top: 150px;
-  }
-  .kyiv__item {
-    padding: 20px 0;
-  }
-}
