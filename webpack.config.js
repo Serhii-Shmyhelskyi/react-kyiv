@@ -4,7 +4,7 @@ const HTMLWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {
   mode: "development",
-  entry: ["@babel/polyfill", "./src/index.jsx"],
+  entry: ["@babel/polyfill", "./src/index.tsx"],
   output: {
     path: path.resolve(__dirname, "build"),
     filename: "[name].[hash].js",
@@ -55,6 +55,22 @@ module.exports = {
           loader: "babel-loader",
           options: {
             presets: ["@babel/preset-react", "@babel/preset-env"],
+          },
+        },
+      },
+      {
+        test: /\.json$/,
+        use: "json-loader",
+      },
+      {
+        test: /\.(ts)x?$/,
+        exclude: /node_modules|\.d\.ts$/,
+        use: {
+          loader: "ts-loader",
+          options: {
+            compilerOptions: {
+              noEmit: false,
+            },
           },
         },
       },
