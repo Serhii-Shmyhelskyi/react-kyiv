@@ -1,9 +1,9 @@
-import React from "react";
+import { FC } from "react";
 import styles from "./photo.module.scss";
 
 import Slider from "../../components/Slider/Slider";
 
-const Photo = () => {
+const Photo: FC = () => {
   return (
     <section className={styles.photo}>
       <div className={styles.container}>

@@ -1,9 +1,9 @@
-import React, { createRef } from "react";
+import { FC } from "react";
 
 import styles from "./dream.module.scss";
 import dreamphoto from "../../assets/img/about-img.png";
 
-const Dream = () => {
+const Dream: FC = () => {
   return (
     <div className={styles.dream}>
       <div className={styles.about__preview + " " + styles.sectionLine}>

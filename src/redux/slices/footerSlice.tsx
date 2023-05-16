@@ -1,5 +1,21 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+type footerItemKont = {
+  name: string;
+  imageUrlFooter: string;
+};
+
+type footerItem = {
+  footerItemDetal: string;
+  footerItemBlog: string;
+  footerItemCompani: string;
+  footerItemKontack: footerItemKont;
+};
+
+export interface footerSliceState {
+  itemFooter: footerItem[];
+}
+
 const initialState = {
   footerItemDetal: ["Бронювання", "Оплата", "Умови", "Політика", "Карта сайта"],
 

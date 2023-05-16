@@ -1,4 +1,4 @@
-import React from "react";
+import { FC } from "react";
 import styles from "./reason.module.scss";
 
 import reasonStat1 from "../../assets/img/statistics1.svg";
@@ -6,7 +6,7 @@ import reasonStat2 from "../../assets/img/statistics2.svg";
 import reasonStat3 from "../../assets/img/statistics3.svg";
 import reasonStat4 from "../../assets/img/statistics4.svg";
 
-const Reason = () => {
+const Reason: FC = () => {
   return (
     <section className={styles.reason}>
       <div className={styles.container + " " + styles.sectionLine}>

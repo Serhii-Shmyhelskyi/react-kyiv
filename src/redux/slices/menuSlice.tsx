@@ -1,6 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
+type menuItem = {
+  name: string;
+  link: string;
+};
+
+export interface menuSliceState {
+  itemMenus: menuItem[];
+}
+
+const initialState: menuSliceState = {
   itemMenus: [
     { name: "Головна", link: "" },
     { name: "Чому Київ?", link: "reason" },

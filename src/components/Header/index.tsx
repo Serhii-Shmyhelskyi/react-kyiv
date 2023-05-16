@@ -1,9 +1,9 @@
-import React from "react";
+import { FC } from "react";
 import styles from "./header.module.scss";
 
 import background from "../../assets/img/topBg.jpg";
 
-const Header = () => {
+const Header: FC = () => {
   return (
     <header className={styles.header}>
       <div

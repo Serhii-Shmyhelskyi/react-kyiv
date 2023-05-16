@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { FC, useState } from "react";
 
 import styles from "./slider.module.scss";
 
@@ -8,7 +8,7 @@ import swiperSlider3 from "../../assets/img/photoSlider3.jpg";
 import sliderNext from "../../assets/img/arrow-left.svg";
 import sliderPrew from "../../assets/img/arrow-right.svg";
 
-const Slider = () => {
+const Slider: FC = () => {
   let slides = [swiperSlider1, swiperSlider2, swiperSlider3];
   let sizePhoto = 640;
 

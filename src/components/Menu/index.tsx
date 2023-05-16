@@ -1,12 +1,13 @@
-import React from "react";
+import { FC } from "react";
 
 import styles from "./menu.module.scss";
 
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import { RootState } from "../../redux/store";
 
-const Menu = () => {
-  const menu = useSelector((state) => state.menu.itemMenus);
+const Menu: FC = () => {
+  const menu = useSelector((state: RootState) => state.menu.itemMenus);
 
   return (
     <nav className={styles.menu}>

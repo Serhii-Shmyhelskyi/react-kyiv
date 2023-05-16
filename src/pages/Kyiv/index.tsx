@@ -1,10 +1,10 @@
-import React from "react";
+import {FC} from "react";
 import styles from "./kyiv.module.scss";
 
 import kuivPhoto1 from "../../assets/img/kyiv1.jpg";
 import kuivPhoto2 from "../../assets/img/kyiv2.jpg";
 
-const Kyiv = () => {
+const Kyiv: FC = () => {
   return (
     <section className={styles.kyiv}>
       <div className={styles.container}>
