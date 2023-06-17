@@ -9,6 +9,7 @@ import Photo from "../../pages/Photo";
 export const router = createBrowserRouter([
   {
     path: "react-kyiv",
+
     element: <App />,
     children: [
       {
