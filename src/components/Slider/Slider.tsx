@@ -27,7 +27,7 @@ const Slider: FC = () => {
         <button
           onClick={() =>
             offset > -sizePhoto + 1
-              ? setOffset(offset - sizePhoto * (slides.length - 1))
+              ? setOffset(-sizePhoto * (slides.length - 1))
               : setOffset(offset + sizePhoto)
           }
           className={styles.sliderPrew}>
@@ -36,7 +36,7 @@ const Slider: FC = () => {
         <button
           onClick={() =>
             offset < -sizePhoto * (slides.length - 1) + 1
-              ? setOffset(offset + sizePhoto * (slides.length - 1))
+              ? setOffset(0)
               : setOffset(offset - sizePhoto)
           }
           className={styles.sliderNext}>
