@@ -1,5 +1,6 @@
 {
-  "name": "webpack-reactjs",
+  "homepage": "https://serhii-shmyhelskyi.github.io/react-kyiv/",
+  "name": "react-kyiv",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
