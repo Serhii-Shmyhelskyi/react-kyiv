@@ -1,7 +1,7 @@
 import { FC } from "react";
 import styles from "./photo.module.scss";
 
-import Slider from "../../components/Slider/Slider";
+import Slider from "../../components/slider/Slider";
 
 const Photo: FC = () => {
   return (
