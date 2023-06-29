@@ -1,23 +1,24 @@
 import React, { FC, useState } from "react";
 
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 
 import styles from "./footer.module.scss";
-import { RootState } from "../../redux/store";
+// import { RootState } from "../../redux/store";
+import { allDataFooter } from "../data/allData";
 
 const Footer: FC = () => {
-  const footerItemDetal = useSelector(
-    (state: RootState) => state.footer.footerItemDetal
-  );
-  const footerItemBlog = useSelector(
-    (state: RootState) => state.footer.footerItemBlog
-  );
-  const footerItemCompani = useSelector(
-    (state: RootState) => state.footer.footerItemCompani
-  );
-  const footerItemKontack = useSelector(
-    (state: RootState) => state.footer.footerItemKontack
-  );
+  // const footerItemDetal = useSelector(
+  //   (state: RootState) => state.footer.footerItemDetal
+  // );
+  // const footerItemBlog = useSelector(
+  //   (state: RootState) => state.footer.footerItemBlog
+  // );
+  // const footerItemCompani = useSelector(
+  //   (state: RootState) => state.footer.footerItemCompani
+  // );
+  // const footerItemKontack = useSelector(
+  //   (state: RootState) => state.footer.footerItemKontack
+  // );
 
   const [toggleCompani, setToggleCompani] = useState(false);
   const [toggleDetal, setToggleDetal] = useState(false);
@@ -41,7 +42,7 @@ const Footer: FC = () => {
                 className={
                   styles.footer__itemList + " " + styles.footer__itemListDetal
                 }>
-                {footerItemDetal.map((obj) => {
+                {allDataFooter.footerItemDetal.map((obj) => {
                   return (
                     <li
                       key={obj}
@@ -69,7 +70,7 @@ const Footer: FC = () => {
                 КОНТАКТИ
               </h5>
               <ul className={styles.footer__itemList}>
-                {footerItemKontack.map((obj) => {
+                {allDataFooter.footerItemKontack.map((obj) => {
                   return (
                     <li
                       key={obj.name}
@@ -101,7 +102,7 @@ const Footer: FC = () => {
                 БЛОГ
               </h5>
               <ul className={styles.footer__itemList}>
-                {footerItemBlog.map((obj) => {
+                {allDataFooter.footerItemBlog.map((obj) => {
                   return (
                     <li
                       key={obj}
@@ -135,7 +136,7 @@ const Footer: FC = () => {
                 className={
                   styles.footer__itemList + " " + styles.footer__itemListCompany
                 }>
-                {footerItemCompani.map((obj) => {
+                {allDataFooter.footerItemCompani.map((obj) => {
                   return (
                     <li
                       key={obj}

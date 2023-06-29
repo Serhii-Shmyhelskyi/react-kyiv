@@ -3,6 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 type menuItem = {
   name: string;
   link: string;
+  pathnameId: string;
 };
 
 export interface menuSliceState {
@@ -11,10 +12,10 @@ export interface menuSliceState {
 
 const initialState: menuSliceState = {
   itemMenus: [
-    { name: "Головна", link: "" },
-    { name: "Чому Київ?", link: "reason" },
-    { name: "Мрія 'АН-225'", link: "dream" },
-    { name: "Фото", link: "photo" },
+    { name: "Головна", link: "/react-kyiv/", pathnameId: "/react-kyiv/" },
+    { name: "Чому Київ?", link: "reason", pathnameId: "/react-kyiv/reason" },
+    { name: "Мрія 'АН-225'", link: "dream", pathnameId: "/react-kyiv/dream" },
+    { name: "Фото", link: "photo", pathnameId: "/react-kyiv/photo" },
   ],
 };
 

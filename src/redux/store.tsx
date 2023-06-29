@@ -1,9 +1,8 @@
 import { configureStore } from "@reduxjs/toolkit";
 import menuReducer from "./slices/menuSlice";
-import footerReducer from "./slices/footerSlice";
 
 export const store = configureStore({
-  reducer: { menu: menuReducer, footer: footerReducer },
+  reducer: { menu: menuReducer },
 });
 
 export type RootState = ReturnType<typeof store.getState>;

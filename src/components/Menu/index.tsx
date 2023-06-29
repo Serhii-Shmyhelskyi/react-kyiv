@@ -2,12 +2,18 @@ import { FC } from "react";
 
 import styles from "./menu.module.scss";
 
+import classnames from "classnames";
+
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { RootState } from "../../redux/store";
 
 const Menu: FC = () => {
   const menu = useSelector((state: RootState) => state.menu.itemMenus);
+
+  let location = useLocation();
+
+  let isActiveMenu = (button: string) => location.pathname === button;
 
   return (
     <nav className={styles.menu}>
@@ -19,11 +25,14 @@ const Menu: FC = () => {
       <ul className={styles.menu__list}>
         {menu.map((obj) => {
           return (
-            <li key={obj.name} className={styles.menu__listItem}>
-              <Link to={obj.link} className={styles.menu__listLink}>
+            <Link to={obj.link} key={obj.name}>
+              <li
+                className={classnames({
+                  [styles.active]: isActiveMenu(obj.pathnameId),
+                })}>
                 {obj.name}
-              </Link>
-            </li>
+              </li>
+            </Link>
           );
         })}
       </ul>
