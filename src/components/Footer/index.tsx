@@ -1,25 +1,9 @@
 import React, { FC, useState } from "react";
 
-// import { useSelector } from "react-redux";
-
 import styles from "./footer.module.scss";
-// import { RootState } from "../../redux/store";
 import { allDataFooter } from "../data/allData";
 
 const Footer: FC = () => {
-  // const footerItemDetal = useSelector(
-  //   (state: RootState) => state.footer.footerItemDetal
-  // );
-  // const footerItemBlog = useSelector(
-  //   (state: RootState) => state.footer.footerItemBlog
-  // );
-  // const footerItemCompani = useSelector(
-  //   (state: RootState) => state.footer.footerItemCompani
-  // );
-  // const footerItemKontack = useSelector(
-  //   (state: RootState) => state.footer.footerItemKontack
-  // );
-
   const [toggleCompani, setToggleCompani] = useState(false);
   const [toggleDetal, setToggleDetal] = useState(false);
   const [toggleContacts, setToggleContacts] = useState(false);
